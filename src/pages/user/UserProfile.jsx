@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import { NavBar } from "../../component/NavBar";
 import CreateIcon from "@mui/icons-material/Create";
+import { useNavigate } from "react-router-dom";
 
 const data = [
   {
@@ -49,6 +50,10 @@ const data = [
 ];
 
 const UserProfile = () => {
+  const navigate = useNavigate();
+  const handelCreateCource = () => {
+    navigate("/createCource");
+  };
   return (
     <>
       <NavBar />
@@ -82,8 +87,9 @@ const UserProfile = () => {
             backgroundColor: "#2B2B2B",
             color: "#D4D4D4",
           }}
+          onClick={handelCreateCource}
         >
-          Create your own Course 
+          Create your own Course
           <CreateIcon />
         </Button>
       </Box>
