@@ -1,0 +1,6 @@
+user name :yashunhawane
+Password: uI9ofZadf08ZtqDF
+
+mongodb+srv://yashunhawane:<password>@cluster0.zrasmex.mongodb.net/
+
+mongodb+srv://yashunhawane:uI9ofZadf08ZtqDF@cluster0.zrasmex.mongodb.net/

@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import SearchBar from "./SearchBar";
 
 export const NavBar = () => {
   const navigate = useNavigate();
@@ -34,6 +35,7 @@ export const NavBar = () => {
             >
               Course✨
             </Typography>
+            <SearchBar />
             <Button
               sx={{
                 backgroundColor: "#2B2B2B",
