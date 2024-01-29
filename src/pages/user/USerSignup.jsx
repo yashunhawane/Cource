@@ -31,7 +31,7 @@ const USerSignup = () => {
       return;
     }
     try {
-      await fetch("http://localhost:3000/signup", {
+      const response = await fetch("http://localhost:3000/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -42,6 +42,13 @@ const USerSignup = () => {
           password: userData.password,
         }),
       });
+      const responseData = await response.json();
+      if (response.ok) {
+        console.log(responseData.message);
+      } else {
+        // If the response indicates an error, display an alert with the error message
+        alert(responseData.error);
+      }
     } catch (error) {
       console.log("error during sending data", error);
     }

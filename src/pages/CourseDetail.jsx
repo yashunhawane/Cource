@@ -10,8 +10,8 @@ import { useLocation } from "react-router-dom";
 
 const CourseDetail = () => {
   const { state } = useLocation();
-
-  const data = state;
+  console.log(state);
+  const { image, title, description, price } = state;
 
   const handleAddToCart = () => {
     console.log("Added to Cart");
@@ -21,16 +21,16 @@ const CourseDetail = () => {
     <>
       <NavBar />
       <Card sx={{ maxWidth: 750, maxHeight: 550, marginTop: 5, mx: "auto" }}>
-        <CardMedia sx={{ height: 320 }} image={data.image} />
+        <CardMedia sx={{ height: 320 }} image={image} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {data.title}
+            {title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {data.description}
+            {description}
           </Typography>
           <Typography variant="h6" color="primary" sx={{ marginTop: 1 }}>
-            ₹{data.price.toFixed(2)}
+            ₹{price ? state.price.toFixed(2) : "N/A"}
           </Typography>
           <Button
             onClick={handleAddToCart}

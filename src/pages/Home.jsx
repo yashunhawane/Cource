@@ -1,3 +1,4 @@
+//import CourceDemo from "../component/CourceDemo";
 import Course from "../component/Course";
 import { NavBar } from "../component/NavBar";
 
@@ -11,3 +12,6 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
